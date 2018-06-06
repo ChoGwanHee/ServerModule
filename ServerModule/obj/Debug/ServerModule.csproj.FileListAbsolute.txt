@@ -1,0 +1,5 @@
+D:\Project Files\ServerModule\ServerModule\bin\Debug\ServerModule.dll
+D:\Project Files\ServerModule\ServerModule\bin\Debug\ServerModule.pdb
+D:\Project Files\ServerModule\ServerModule\obj\Debug\ServerModule.csprojResolveAssemblyReference.cache
+D:\Project Files\ServerModule\ServerModule\obj\Debug\ServerModule.dll
+D:\Project Files\ServerModule\ServerModule\obj\Debug\ServerModule.pdb

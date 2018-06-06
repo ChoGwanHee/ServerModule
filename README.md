@@ -1,2 +1,2 @@
 # ServerModule
-Coelacanth TCP ServerModule Project
+Coelacanth Game Clinet Library
