@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 
 // http://treeofimaginary.tistory.com/96 .NET exception 버그 참고
+// http://littles.egloos.com/tag/mono/page/1 .NET 동적 로드 기법
 // Unity\Editor\Data\PlaybackEngines\windowsstandalonesupport\Variations\win32_development_mono\Data\Managed
 namespace ServerModule
 {
@@ -16,7 +17,7 @@ namespace ServerModule
             get { return _server; }
             set { _server = value; }
         }
-
+        
         private void Start()
         {
             SetConnect();

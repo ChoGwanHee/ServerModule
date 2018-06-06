@@ -11,7 +11,7 @@ namespace ServerModule
     public class ConnectServer : ServerManager
     {
         public string _sequance;
-
+        
         public override void SetConnect()
         {
             base.SetConnect();
