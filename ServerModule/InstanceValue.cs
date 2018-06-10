@@ -20,48 +20,48 @@ namespace ServerModule
         Lose
     }
 
-    public class InstanceValue
+    public static class InstanceValue
     {
         /// <summary>
         /// server argument
         /// </summary>
-        private Socket _tcp;
-        public Socket TCP
+        private static Socket _tcp;
+        public static Socket TCP
         {
             get { return _tcp; }
             set { _tcp = value; }
         }
 
-        private UdpClient _udp;
-        public UdpClient UDP
+        private static UdpClient _udp;
+        public static UdpClient UDP
         {
             get { return _udp; }
             set { _udp = value; }
         }
 
-        private string _address;
-        public string Address
+        private static string _address;
+        public static string Address
         {
             get { return _address; }
             set { _address = value; }
         }
 
-        private int _port;
-        public int Port
+        private static int _port;
+        public static int Port
         {
             get { return _port; }
             set { _port = value; }
         }
 
-        private byte[] _buffersize;
-        public byte[] BufferSize
+        private static byte[] _buffersize;
+        public static byte[] BufferSize
         {
             get { return _buffersize; }
             set { _buffersize = value; }
         }
 
-        private int _receive;
-        public int Receive
+        private static int _receive;
+        public static int Receive
         {
             get { return _receive; }
             set { _receive = value; }
@@ -70,50 +70,50 @@ namespace ServerModule
         /// <summary>
         /// lobby argument
         /// </summary>
-        private bool _connected;
-        public bool Connected
+        private static bool _connected;
+        public static bool Connected
         {
             get { return _connected; }
             set { _connected = value; }
         }
 
-        private int _id;
-        public int ID
+        private static int _id;
+        public static int ID
         {
             get { return _id; }
             set { _id = value; }
         }
 
-        private int _state;
-        public int State
+        private static int _state;
+        public static int State
         {
             get { return _state; }
             set { _state = value; }
         }
 
-        private string _version;
-        public string Version
+        private static string _version;
+        public static string Version
         {
             get { return _version; }
             set { _version = value; }
         }
 
-        private string _nickname;
-        public string Nickname
+        private static string _nickname;
+        public static string Nickname
         {
             get { return _nickname; }
             set { _nickname = value; }
         }
 
-        private int _min;
-        public int Min
+        private static int _min;
+        public static int Min
         {
             get { return _min; }
             set { _min = value; }
         }
 
-        private int _max;
-        public int Max
+        private static int _max;
+        public static int Max
         {
             get { return _max; }
             set { _max = value; }
