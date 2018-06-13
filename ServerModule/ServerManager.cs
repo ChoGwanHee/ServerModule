@@ -84,7 +84,7 @@ namespace ServerModule
             switch (text[0])
             {
                 case "CONNECT":
-                    Send(string.Format("INITIALIZE"));
+                    Send(string.Format("INITIALIZE:{0}", InstanceValue.Nickname));
                     Console.WriteLine("Client Server Connected : " + text[0]);
                     break;
                 case "INITIALIZE":
@@ -94,6 +94,9 @@ namespace ServerModule
                     break;
                 case "DISCONNECT":
                     Console.WriteLine("Client Server Disconnected : " + text[0]);
+                    break;
+                case "NICKNAME":
+                    Console.WriteLine("Client NickName : " + message);
                     break;
                 default:
                     Console.WriteLine("Data does not exist");
