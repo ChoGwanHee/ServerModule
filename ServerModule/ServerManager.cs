@@ -14,7 +14,7 @@ namespace ServerModule
     public static class ServerManager
     {
         public static string _sequance;
-        private static void Initialized()
+        public static void Initialized()
         {
             // server argument
             InstanceValue.TCP = null;
@@ -30,21 +30,6 @@ namespace ServerModule
             InstanceValue.Version = null;
             InstanceValue.Nickname = null;
         }
-
-        //public static void SetConnect()
-        //{
-        //    try
-        //    {
-        //        Initialized();
-        //        Connect("127.0.0.1", 2020);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        Console.WriteLine(ex.ToString());
-        //        throw;
-        //    }
-        //    Console.WriteLine("서버 접속 시도");
-        //}
 
         public static void TCPConnect(string _address, int _port)
         {

@@ -5,3 +5,4 @@ D:\Project Files\ServerModule\ServerModule\obj\Debug\ServerModule.dll
 D:\Project Files\ServerModule\ServerModule\obj\Debug\ServerModule.pdb
 D:\Project Files\Coelacanth\Assets\Plugins\ServerModule\ServerModule.dll
 D:\Project Files\Coelacanth\Assets\Plugins\ServerModule\ServerModule.pdb
+D:\Project Files\ServerModule\ServerModule\obj\Debug\ServerModule.csproj.CoreCompileInputs.cache
