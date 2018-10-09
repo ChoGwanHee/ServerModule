@@ -118,5 +118,21 @@ namespace ServerModule
             get { return _max; }
             set { _max = value; }
         }
+
+        readonly static int RoomMaxCount = 4;
+
+        private static int _roomid;
+        public static int Roomid
+        {
+            get { return _roomid; }
+            set { _roomid = value; }
+        }
+
+        private static bool _ready;
+        public static bool Ready
+        {
+            get { return _ready; }
+            set { _ready = value; }
+        }
     }
 }

@@ -5,3 +5,9 @@ D:\Project Files\ServerModule\ServerModule\obj\Debug\ServerModule.dll
 D:\Project Files\ServerModule\ServerModule\obj\Debug\ServerModule.pdb
 D:\Project Files\Coelacanth\Assets\Plugins\ServerModule\ServerModule.dll
 D:\Project Files\Coelacanth\Assets\Plugins\ServerModule\ServerModule.pdb
+D:\Program Files\Develop\Coelacanth\Assets\Plugins\ServerModule\ServerModule.dll
+D:\Program Files\Develop\Coelacanth\Assets\Plugins\ServerModule\ServerModule.pdb
+D:\Program Files\Develop\ServerModule\ServerModule\obj\Debug\ServerModule.csprojAssemblyReference.cache
+D:\Program Files\Develop\ServerModule\ServerModule\obj\Debug\ServerModule.csproj.CoreCompileInputs.cache
+D:\Program Files\Develop\ServerModule\ServerModule\obj\Debug\ServerModule.dll
+D:\Program Files\Develop\ServerModule\ServerModule\obj\Debug\ServerModule.pdb

@@ -13,7 +13,14 @@ namespace ServerModule
 {
     public static class ServerManager
     {
+        private static int _people;
+        public static int People
+        {
+            get { return _people; }
+            set { _people = value; }
+        }
         public static string _sequance;
+
         public static void Initialized()
         {
             // server argument
@@ -83,14 +90,18 @@ namespace ServerModule
 
             switch (text[0])
             {
-                case "CONNECT":
-                    Send(string.Format("INITIALIZE:{0}", InstanceValue.Nickname));
+                case "CONNECT": // 접속 성공할 경우, 서버에서 패킷을 보내온다.
+                    Send(string.Format("INITIALIZE:{0}:{1}", InstanceValue.Nickname, 1));
                     Console.WriteLine("Client Server Connected : " + text[0]);
                     break;
                 case "INITIALIZE":
                     Console.WriteLine("Play to game set data : " + text[0]);
                     _sequance = text[1];
+                    People++;
                     Send(string.Format("GAMESTART"));
+                    break;
+                case "CREATEROOM":
+
                     break;
                 case "DISCONNECT":
                     Console.WriteLine("Client Server Disconnected : " + text[0]);
