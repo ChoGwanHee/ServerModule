@@ -101,7 +101,6 @@ namespace ServerModule
                     Send(string.Format("GAMESTART"));
                     break;
                 case "CREATEROOM":
-
                     break;
                 case "DISCONNECT":
                     Console.WriteLine("Client Server Disconnected : " + text[0]);
