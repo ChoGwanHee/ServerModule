@@ -43,8 +43,8 @@ namespace ServerModule
             IPAddress serverIP = IPAddress.Parse(_address);
             int serverPort = Convert.ToInt32(_port);
             InstanceValue.TCP = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-            InstanceValue.TCP.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.SendTimeout, 3000);
-            InstanceValue.TCP.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReceiveTimeout, 3000);
+            InstanceValue.TCP.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.SendTimeout, 500);
+            InstanceValue.TCP.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReceiveTimeout, 500);
             InstanceValue.TCP.Connect(new IPEndPoint(serverIP, serverPort));
             Console.WriteLine("Server Connect To Client (" + serverIP + ":" + serverPort + ")");
         }
