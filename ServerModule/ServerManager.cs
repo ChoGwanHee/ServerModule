@@ -87,7 +87,14 @@ namespace ServerModule
         {
             string message = Encoding.UTF8.GetString(InstanceValue.BufferSize, 2, _length - 2);
             string[] text = message.Split(':');
-
+            /*
+             * NICKERROR
+             * NICKNAME
+             * WEAPONCHANGE
+             * FALL
+             * RECOVERY
+             * DISCONNECT
+            */
             switch (text[0])
             {
                 case "CONNECT": // 접속 성공할 경우, 서버에서 패킷을 보내온다.
