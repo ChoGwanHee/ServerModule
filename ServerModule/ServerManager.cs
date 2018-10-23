@@ -108,6 +108,7 @@ namespace ServerModule
                     Send(string.Format("GAMESTART"));
                     break;
                 case "CREATEROOM":
+                    InstanceValue.Room = text[1];
                     break;
                 case "DISCONNECT":
                     Console.WriteLine("Client Server Disconnected : " + text[0]);

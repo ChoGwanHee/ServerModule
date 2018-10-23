@@ -120,8 +120,8 @@ namespace ServerModule
         }
         
 
-        private static int _room;
-        public static int Room
+        private static string _room;
+        public static string Room
         {
             get { return _room; }
             set { _room = value; }
