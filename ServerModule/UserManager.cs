@@ -5,10 +5,10 @@ using System.Text;
 
 namespace ServerModule
 {
-    class UserManager
+    public static class UserManager
     {
-        private static int _nickname;
-        public static int Nickname
+        private static string _nickname;
+        public static string Nickname
         {
             get { return _nickname; }
             set { _nickname = value; }
@@ -26,13 +26,6 @@ namespace ServerModule
         {
             get { return _ready; }
             set { _ready = value; }
-        }
-
-        private static string _weapon;
-        public static string Weapon
-        {
-            get { return _weapon; }
-            set { _weapon = value; }
         }
     }
 }

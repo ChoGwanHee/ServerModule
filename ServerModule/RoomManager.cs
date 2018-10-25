@@ -7,7 +7,6 @@ namespace ServerModule
 {
     class RoomManager
     {
-
         private string _roomid;
         public string RoomId
         {

@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
@@ -13,6 +14,8 @@ namespace ServerModule
 {
     public static class ServerManager
     {
+        public static List<UserManager> User = new List<UserManager>();
+
         private static int _people;
         public static int People
         {
@@ -109,6 +112,29 @@ namespace ServerModule
                     break;
                 case "CREATEROOM":
                     InstanceValue.Room = text[1];
+
+
+
+                    //if (text[4] == "0")
+                    //{
+                    //    UserManager.Nickname[0] = text[2];
+                    //    UserManager.Id[0] = Convert.ToInt32(text[3]);
+                    //}
+                    //else if (text[4] == "1")
+                    //{
+                    //    UserManager.Nickname[1] = text[2];
+                    //    UserManager.Id[1] = Convert.ToInt32(text[3]);
+                    //}
+                    //else if (text[4] == "2")
+                    //{
+                    //    UserManager.Nickname[2] = text[2];
+                    //    UserManager.Id[2] = Convert.ToInt32(text[3]);
+                    //}
+                    //else if (text[4] == "3")
+                    //{
+                    //    UserManager.Nickname[3] = text[2];
+                    //    UserManager.Id[3] = Convert.ToInt32(text[3]);
+                    //}
                     break;
                 case "DISCONNECT":
                     Console.WriteLine("Client Server Disconnected : " + text[0]);
