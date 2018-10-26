@@ -14,8 +14,6 @@ namespace ServerModule
 {
     public static class ServerManager
     {
-        public static List<UserManager> User = new List<UserManager>();
-
         private static int _people;
         public static int People
         {

@@ -133,5 +133,12 @@ namespace ServerModule
             get { return _ready; }
             set { _ready = value; }
         }
+
+        private static int _stage;
+        public static int Stage
+        {
+            get { return _stage; }
+            set { _stage = value; }
+        }
     }
 }
