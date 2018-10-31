@@ -120,7 +120,7 @@ namespace ServerModule
             switch (text[0])
             {
                 case "CONNECT": // 접속 성공할 경우, 서버에서 패킷을 보내온다.
-                    Send(string.Format("INITIALIZE:{0}:{1}", InstanceValue.Nickname, 1));
+                    Send(string.Format("CONNECT:{0}:{1}", InstanceValue.Nickname, 1));
                     Console.WriteLine("Client Server Connected : " + text[0]);
                     break;
                 case "INITIALIZE":
@@ -130,33 +130,9 @@ namespace ServerModule
                     Send(string.Format("GAMESTART"));
                     break;
                 case "JOINGAME":
-
                     break;
                 case "CREATEROOM":
                     InstanceValue.Room = text[1];
-
-
-
-                    //if (text[4] == "0")
-                    //{
-                    //    UserManager.Nickname[0] = text[2];
-                    //    UserManager.Id[0] = Convert.ToInt32(text[3]);
-                    //}
-                    //else if (text[4] == "1")
-                    //{
-                    //    UserManager.Nickname[1] = text[2];
-                    //    UserManager.Id[1] = Convert.ToInt32(text[3]);
-                    //}
-                    //else if (text[4] == "2")
-                    //{
-                    //    UserManager.Nickname[2] = text[2];
-                    //    UserManager.Id[2] = Convert.ToInt32(text[3]);
-                    //}
-                    //else if (text[4] == "3")
-                    //{
-                    //    UserManager.Nickname[3] = text[2];
-                    //    UserManager.Id[3] = Convert.ToInt32(text[3]);
-                    //}
                     break;
                 case "DISCONNECT":
                     Console.WriteLine("Client Server Disconnected : " + text[0]);
