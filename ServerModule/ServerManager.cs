@@ -22,6 +22,20 @@ namespace ServerModule
         }
         public static string _sequance;
 
+        private static string[] _text;
+        public static string[] text
+        {
+            get { return _text; }
+            set { _text = value; }
+        }
+
+        private static string _log;
+        public static string Log
+        {
+            get { return _log; }
+            set { _log = value; }
+        }
+
         public static void Initialized()
         {
             // server argument
@@ -84,10 +98,17 @@ namespace ServerModule
             }
         }
 
+        public static string ParsePacketLogData()
+        {
+            return Log;
+        }
+
         public static void ParsePacket(int _length)
         {
             string message = Encoding.UTF8.GetString(InstanceValue.BufferSize, 2, _length - 2);
-            string[] text = message.Split(':');
+            //string[] text = message.Split(':');
+            text = message.Split(':');
+            Log = message;
             /*
              * NICKERROR
              * NICKNAME
@@ -107,6 +128,9 @@ namespace ServerModule
                     _sequance = text[1];
                     People++;
                     Send(string.Format("GAMESTART"));
+                    break;
+                case "JOINGAME":
+
                     break;
                 case "CREATEROOM":
                     InstanceValue.Room = text[1];
