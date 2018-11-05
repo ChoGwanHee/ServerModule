@@ -140,5 +140,34 @@ namespace ServerModule
             get { return _stage; }
             set { _stage = value; }
         }
+
+        private static string _error;
+        public static string Error
+        {
+            get { return _error; }
+            set { _error = value; }
+        }
+        ///
+        ///
+        private static float _x;
+        public static float X
+        {
+            get { return _x; }
+            set { _x = value; }
+        }
+
+        private static float _z;
+        public static float Z
+        {
+            get { return _z; }
+            set { _z = value; }
+        }
+
+        private static float _rotate;
+        public static float Rotate
+        {
+            get { return _rotate; }
+            set { _rotate = value; }
+        }
     }
 }

@@ -110,17 +110,31 @@ namespace ServerModule
             text = message.Split(':');
             Log = message;
             /*
-             * NICKERROR
-             * NICKNAME
-             * WEAPONCHANGE
              * FALL
+             * RESPAWN
+             * CREATEROOM
              * RECOVERY
+             * ITEMBOX
+             * READY
+             * START
+             * MOVE
+             * ROTATE
+             * BTNSTART
              * DISCONNECT
+             * WEAPONCHANGE
+             * JOINGAME
+             * HIT
+             * WIN
+             * LOSE
+             * SCORE
+             * PORTAL
+             * HOST
+             * GUEST
             */
             switch (text[0])
             {
                 case "CONNECT": // 접속 성공할 경우, 서버에서 패킷을 보내온다.
-                    Send(string.Format("CONNECT:{0}:{1}", InstanceValue.Nickname, 1));
+                    Send(string.Format("CONNECT:{0}:{1}", InstanceValue.Nickname, InstanceValue.ID));
                     Console.WriteLine("Client Server Connected : " + text[0]);
                     break;
                 case "INITIALIZE":
@@ -129,10 +143,19 @@ namespace ServerModule
                     People++;
                     Send(string.Format("GAMESTART"));
                     break;
+                case "MOVE":
+                    InstanceValue.X = int.Parse(text[3]);
+                    InstanceValue.Z = int.Parse(text[4]);
+                    break;
+                case "ROTATE":
+                    InstanceValue.Rotate = float.Parse(text[1]);
+                    break;
+                case "BTNSTART":
+                    break;
                 case "JOINGAME":
                     break;
                 case "CREATEROOM":
-                    InstanceValue.Room = text[1];
+                    InstanceValue.Room = text[3];
                     break;
                 case "DISCONNECT":
                     Console.WriteLine("Client Server Disconnected : " + text[0]);
