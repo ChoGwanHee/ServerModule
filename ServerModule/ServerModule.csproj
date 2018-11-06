@@ -45,6 +45,7 @@
     <Compile Include="RoomManager.cs" />
     <Compile Include="ServerManager.cs" />
     <Compile Include="StateManager.cs" />
+    <Compile Include="StatManager.cs" />
     <Compile Include="UserManager.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

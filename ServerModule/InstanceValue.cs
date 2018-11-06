@@ -118,7 +118,13 @@ namespace ServerModule
             get { return _max; }
             set { _max = value; }
         }
-        
+
+        private static string _log;
+        public static string Log
+        {
+            get { return _log; }
+            set { _log = value; }
+        }
 
         private static string _room;
         public static string Room

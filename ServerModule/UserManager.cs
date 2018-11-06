@@ -21,11 +21,11 @@ namespace ServerModule
             set { _id = value; }
         }
 
-        private static bool _ready;
-        public static bool Ready
+        private static float _score;
+        public static float Score
         {
-            get { return _ready; }
-            set { _ready = value; }
+            get { return _score; }
+            set { _score = value; }
         }
     }
 }

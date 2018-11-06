@@ -29,13 +29,6 @@ namespace ServerModule
             set { _text = value; }
         }
 
-        private static string _log;
-        public static string Log
-        {
-            get { return _log; }
-            set { _log = value; }
-        }
-
         public static void Initialized()
         {
             // server argument
@@ -98,21 +91,26 @@ namespace ServerModule
             }
         }
 
+        public static void ClassifyUserList()
+        {
+
+        }
+
         public static string ParsePacketLogData()
         {
-            return Log;
+            return InstanceValue.Log;
         }
 
         public static void ParsePacket(int _length)
         {
             string message = Encoding.UTF8.GetString(InstanceValue.BufferSize, 2, _length - 2);
-            //string[] text = message.Split(':');
-            text = message.Split(':');
-            Log = message;
+            string[] text = message.Split(':');
+            InstanceValue.Log = message;
             /*
              * FALL
              * RESPAWN
              * CREATEROOM
+             * JOINROOM
              * RECOVERY
              * ITEMBOX
              * READY
@@ -122,7 +120,6 @@ namespace ServerModule
              * BTNSTART
              * DISCONNECT
              * WEAPONCHANGE
-             * JOINGAME
              * HIT
              * WIN
              * LOSE
@@ -130,6 +127,7 @@ namespace ServerModule
              * PORTAL
              * HOST
              * GUEST
+             * SCORE
             */
             switch (text[0])
             {
@@ -156,6 +154,8 @@ namespace ServerModule
                     break;
                 case "CREATEROOM":
                     InstanceValue.Room = text[3];
+                    break;
+                case "JOINROOM":
                     break;
                 case "DISCONNECT":
                     Console.WriteLine("Client Server Disconnected : " + text[0]);
