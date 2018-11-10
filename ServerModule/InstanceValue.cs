@@ -84,6 +84,15 @@ namespace ServerModule
             set { _id = value; }
         }
 
+        private static int _sequence;
+        public static int Sequence
+        {
+            get { return _sequence; }
+            set { _sequence = value; }
+        }
+
+        
+
         private static int _state;
         public static int State
         {
@@ -103,6 +112,20 @@ namespace ServerModule
         {
             get { return _nickname; }
             set { _nickname = value; }
+        }
+
+        private static int _count;
+        public static int Count
+        {
+            get { return _count; }
+            set { _count = value; }
+        }
+
+        private static int _score;
+        public static int Score
+        {
+            get { return _score; }
+            set { _score = value; }
         }
 
         private static int _min;

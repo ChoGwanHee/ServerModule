@@ -29,6 +29,11 @@ namespace ServerModule
             set { _text = value; }
         }
 
+        public static UserPrivateData hostUser = new UserPrivateData();
+        public static UserPrivateData firstUser = new UserPrivateData();
+        public static UserPrivateData secondUser = new UserPrivateData();
+        public static UserPrivateData thirdUser = new UserPrivateData();
+
         public static void Initialized()
         {
             // server argument
@@ -91,9 +96,8 @@ namespace ServerModule
             }
         }
 
-        public static void ClassifyUserList()
+        public static void ClassifyUserList(string _nickname, int _id)
         {
-
         }
 
         public static string ParsePacketLogData()
@@ -128,22 +132,30 @@ namespace ServerModule
              * HOST
              * GUEST
              * SCORE
+             * ITEMBOX
+             * ITEMBOXCREATE
+             * ITEMBOXDELETE
             */
             switch (text[0])
             {
                 case "CONNECT": // 접속 성공할 경우, 서버에서 패킷을 보내온다.
                     Send(string.Format("CONNECT:{0}:{1}", InstanceValue.Nickname, InstanceValue.ID));
-                    Console.WriteLine("Client Server Connected : " + text[0]);
                     break;
                 case "INITIALIZE":
-                    Console.WriteLine("Play to game set data : " + text[0]);
-                    _sequance = text[1];
-                    People++;
-                    Send(string.Format("GAMESTART"));
+                    InstanceValue.Sequence = int.Parse(text[1]);
+                    InstanceValue.Nickname = text[2];
+                    InstanceValue.ID = int.Parse(text[3]);
+                    InstanceValue.Room = text[4];
+                    break;
+                case "FULL":
+                    Send(string.Format("FULL", InstanceValue.Room));
                     break;
                 case "MOVE":
                     InstanceValue.X = int.Parse(text[3]);
                     InstanceValue.Z = int.Parse(text[4]);
+                    break;
+                case "SCORE":
+                    ClassifyUserList(text[1], int.Parse(text[2]));
                     break;
                 case "ROTATE":
                     InstanceValue.Rotate = float.Parse(text[1]);
@@ -158,13 +170,10 @@ namespace ServerModule
                 case "JOINROOM":
                     break;
                 case "DISCONNECT":
-                    Console.WriteLine("Client Server Disconnected : " + text[0]);
                     break;
                 case "NICKNAME":
-                    Console.WriteLine("Client NickName : " + message);
                     break;
                 default:
-                    Console.WriteLine("Data does not exist");
                     break;
             }
         }
