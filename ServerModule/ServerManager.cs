@@ -148,7 +148,7 @@ namespace ServerModule
                     InstanceValue.Room = text[4];
                     break;
                 case "FULL":
-                    Send(string.Format("FULL", InstanceValue.Room));
+                    Send(string.Format("FULL:{0}:{1}:{2}", InstanceValue.Nickname, InstanceValue.ID, InstanceValue.Room));
                     break;
                 case "MOVE":
                     InstanceValue.X = int.Parse(text[3]);
