@@ -11,14 +11,13 @@ D:/Program Files/Develop/ServerModule/ServerModule/obj/Debug/ServerModule.csproj
 D:/Program Files/Develop/ServerModule/ServerModule/obj/Debug/ServerModule.csproj.CoreCompileInputs.cache
 D:/Program Files/Develop/ServerModule/ServerModule/obj/Debug/ServerModule.dll
 D:/Program Files/Develop/ServerModule/ServerModule/obj/Debug/ServerModule.pdb
-/Users/hanga/Documents/Develop/ServerModule/ServerModule/obj/Debug/ServerModule.csprojAssemblyReference.cache
+C:/Users/user/Documents/Develop/Coelacanth/Assets/Plugins/ServerModule/ServerModule.dll
+C:/Users/user/Documents/Develop/Coelacanth/Assets/Plugins/ServerModule/ServerModule.pdb
+C:/Users/user/Documents/Develop/ServerModule/ServerModule/obj/Debug/ServerModule.csprojResolveAssemblyReference.cache
+C:/Users/user/Documents/Develop/ServerModule/ServerModule/obj/Debug/ServerModule.dll
+C:/Users/user/Documents/Develop/ServerModule/ServerModule/obj/Debug/ServerModule.pdb
+/Users/hanga/Documents/Develop/Coelacanth/Assets/Plugins/ServerModule/ServerModule.dll
+/Users/hanga/Documents/Develop/Coelacanth/Assets/Plugins/ServerModule/ServerModule.pdb
 /Users/hanga/Documents/Develop/ServerModule/ServerModule/obj/Debug/ServerModule.csproj.CoreCompileInputs.cache
 /Users/hanga/Documents/Develop/ServerModule/ServerModule/obj/Debug/ServerModule.dll
 /Users/hanga/Documents/Develop/ServerModule/ServerModule/obj/Debug/ServerModule.pdb
-/Users/hanga/Documents/Develop/Coelacanth/Assets/Plugins/ServerModule/ServerModule.dll
-/Users/hanga/Documents/Develop/Coelacanth/Assets/Plugins/ServerModule/ServerModule.pdb
-C:\Users\user\Documents\Develop\Coelacanth\Assets\Plugins\ServerModule\ServerModule.dll
-C:\Users\user\Documents\Develop\Coelacanth\Assets\Plugins\ServerModule\ServerModule.pdb
-C:\Users\user\Documents\Develop\ServerModule\ServerModule\obj\Debug\ServerModule.csprojResolveAssemblyReference.cache
-C:\Users\user\Documents\Develop\ServerModule\ServerModule\obj\Debug\ServerModule.dll
-C:\Users\user\Documents\Develop\ServerModule\ServerModule\obj\Debug\ServerModule.pdb
